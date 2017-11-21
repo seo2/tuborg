@@ -1,7 +1,41 @@
-body{}
+body{text-transform: uppercase; font-family: "museo-sans"; background: url(../img/bg.jpg)}
 header{background: #0057a7;}
 header .container{padding-top: 40px;}
+.container-fluid { margin: 0 -.75rem; }
 
-.carousel{margin-top: 2px; margin-bottom: 20px;}
+#cabecera{position: relative; padding-top: 100px;}
+#logo_ba{ position: absolute; width: 320px; top: 30%; left: 50%; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); transform: translate(-50%,-50%);}
+header img#bg-header{margin-bottom: -9px;}
 
-footer{background: #0057a7; height: 150px;}
+
+.carousel{margin-top: -15px; margin-bottom: 20px;}
+
+.info{}
+.info h2{ font-weight: 900; border: 4px solid; font-size: 25px; display: inline-block; padding: 5px 10px;}
+.info p{ font-weight: 700;}
+.info#socios{border-bottom: 4px solid #000;border-top: 4px solid #000;}
+.info#socios p{font-size: 40px; font-weight: 900;}
+.info#socios p a{color: #000; }
+.info#socios p a:hover{border-bottom: 4px solid #000;}
+.info#socios .col{height: 150px;}
+
+#hashtag{text-align: center; margin-top: 60px;}
+#hashtag h3{ font-weight: 900; font-size: 30px;}
+#hashtag h3 span{border: 6px solid; padding: 5px 10px;}
+
+span.elusuario {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    border: 5px solid;
+}
+
+footer{background: #0057a7;}
+footer .col{height: 200px;}
+#logo-tuborg{padding-right: 30px; border-right: 2px solid #fff;}
+
+.nomarbot{margin-bottom: 0;}
