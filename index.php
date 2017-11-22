@@ -14,7 +14,7 @@
 	<link href="assets/instashow/jquery.instashow.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tuborg.css" >
     
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png?v=2" />
     
   </head>
   <body>
@@ -43,10 +43,10 @@
 	</div>
 	<div class="container">
 		<div class="row info">
-			<div class="col s3" id="somos">
+			<div class="col s12 m3" id="somos">
 				<h2>Somos</h2>
 			</div>
-			<div class="col s9">
+			<div class="col s12 m9">
 				<p>¡Bienvenidos a BARRIO ARTE!<br>
 					Somos una alianza cultural impulsada por los más importantes Museos de Chile para la promoción de la cultura y las artes en su territorio común. BARRIO ARTE propone un encuentro con la comunidad porque creemos que el desarrollo cultural se logra con el trabajo colaborativo,
 					la generación de pertenencia y la valoración de nuestro patrimonio urbano y arquitectónico.<br>
@@ -55,19 +55,31 @@
 			</div>
 		</div>
 		<div class="row info" id="socios">
-			<div class="col s3 valign-wrapper">
+			<div class="col s12 m3 valign-wrapper">
 				<h2>Socios</h2>
 			</div>
-			<div class="col s9 valign-wrapper">
+			<div class="col s12 m9 valign-wrapper">
 				<p><a href="http://www.gam.cl" target="_blank">gam</a> - <a href="https://www.mavi.cl/" target="_blank">mavi</a> - <a href="http://www.mac.uchile.cl/" target="_blank">mac</a> - <a href="http://www.mnba.cl/" target="_blank">mnba</a></p>
 			</div>
 		</div>
 		<div class="row info" id="participan">
-			<div class="col s3">
+			<div class="col s12 m3 valign-wrapper">
 				<h2>Participan</h2>
 			</div>
-			<div class="col s9">
-				<p>El Biógrafo - Galería Plop - Galería Eckho - Metales Pesados - Libros Prólogo - Galería Lira - Tienda Nacional - Librería Ulises - El Cid Campeador - Teatro Ictus - Posada del Corregidor  - Espacio O
+			<div class="col s12 m9 valign-wrapper">
+				<p>
+					<a href="http://www.elbiografo.cl/wordpress/" target="_blank">El Biógrafo</a> - 
+					<a href="http://www.plopgaleria.com/" target="_blank">Galería Plop</a> - 
+					<a href="http://ekho.cl/" target="_blank">Galería Eckho</a> - 
+					<a href="http://metalespesados.cl/#/" target="_blank">Metales Pesados</a> - 
+					<a href="https://www.facebook.com/pages/Libros-Prologo/1429093774039694" target="_blank">Libros Prólogo</a> - 
+					<a href="http://www.galerialira.com/" target="_blank">Galería Lira</a> - 
+					<a href="https://www.facebook.com/latiendanacional.cl/" target="_blank">Tienda Nacional</a> - 
+					<a href="http://www.uliseslastarria.cl/" target="_blank">Librería Ulises</a> - 
+					<a href="http://www.libroselcid.cl/" target="_blank">El Cid Campeador</a> - 
+					<a href="http://www.teatroictus.cl/" target="_blank">Teatro Ictus</a> - 
+					<a href="http://www.santiagocultura.cl/posada-del-corregidor-2/" target="_blank">Posada del Corregidor</a>  - 
+					<a href="https://www.casaodelastarria.com/" target="_blank">Espacio O</a>
 				</p>
 			</div>
 		</div>
@@ -114,15 +126,13 @@
 	</div>
 
     <footer>
-        <div class="container">
-	        <div class="row nomarbot">
-	        	<div class="col s3 valign-wrapper">
-	        		<img src="assets/img/logo-footer-tuborg.png" class="responsive-img" id="logo-tuborg">
-	        	</div>
-	        	<div class="col s9 valign-wrapper">
-	        		<img src="assets/img/logos-footer.png" class="responsive-img">
-	        	</div>
-	        </div>
+        <div class="row nomarbot">
+			<div class="col s12 hide-on-small-only">
+        		<img src="assets/img/footer-15.png" class="responsive-img">
+			</div>
+			<div class="col s12 hide-on-med-and-up	">
+        		<img src="assets/img/footer-15_m.png" class="responsive-img">
+			</div>
         </div>
     </footer>	
     <!-- Optional JavaScript -->
@@ -132,7 +142,6 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js"></script>
 	<script src="assets/instashow/jquery.instashow.js"></script>
 

@@ -1,7 +1,7 @@
 body{text-transform: uppercase; font-family: "museo-sans"; background: url(../img/bg.jpg)}
 header{background: #0057a7;}
 header .container{padding-top: 40px;}
-.container-fluid { margin: 0 -.75rem; }
+.container-fluid .row .col{ padding: 0; }
 
 #cabecera{position: relative; padding-top: 100px;}
 #logo_ba{ position: absolute; width: 320px; top: 30%; left: 50%; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); transform: translate(-50%,-50%);}
@@ -18,6 +18,9 @@ header img#bg-header{margin-bottom: -9px;}
 .info#socios p a{color: #000; }
 .info#socios p a:hover{border-bottom: 4px solid #000;}
 .info#socios .col{height: 150px;}
+.info#participan .col{height: 150px;}
+.info#participan p a{color: #000; }
+.info#participan p a:hover{border-bottom: 1px solid #000;}
 
 #hashtag{text-align: center; margin-top: 60px;}
 #hashtag h3{ font-weight: 900; font-size: 30px;}
@@ -35,7 +38,23 @@ span.elusuario {
 }
 
 footer{background: #0057a7;}
-footer .col{height: 200px;}
+footer .col{}
 #logo-tuborg{padding-right: 30px; border-right: 2px solid #fff;}
 
+
 .nomarbot{margin-bottom: 0;}
+
+@media only screen and (max-width: 768px) {
+	#logo_ba{  width: 50%;}
+	
+	.info{text-align: center;}
+	.info h2{margin: 0 auto;display: block; }
+	.info p{font-size: 12px; }
+	.info#socios h2{margin: 30px auto; width: 100%;}
+	.info#socios p{font-size: 40px; margin: 0 auto 30px;}
+	.info#socios .col{height: auto;}
+	.info#participan .col{height: auto;}
+	.info#participan h2{margin: 20px auto 30px; width: 100%;}
+	
+	#hashtag h3{font-size: 20px;}
+}
