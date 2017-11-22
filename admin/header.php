@@ -19,7 +19,7 @@ function usuarioNom($id){
 if($_SESSION['ccid']){
 	setcookie('id', $_SESSION['ccid']);
 	$db->where ('usuID', $_SESSION['ccid']);
-	$usuario = $db->getOne ("sn_usuarios");
+	$usuario = $db->getOne ("tuborg_usuarios");
 	
 	$_usuID			= $usuario['usuID'];
     $_usuNom		= $usuario['usuNom'];
@@ -30,7 +30,7 @@ if($_SESSION['ccid']){
  } elseif($_COOKIE['id']) { 
 	 
 	$db->where ('usuID', $_COOKIE['id']);
-	$usuario = $db->getOne ("sn_usuarios");
+	$usuario = $db->getOne ("tuborg_usuarios");
 	
 	$_usuID			= $usuario['usuID'];
     $_usuNom		= $usuario['usuNom'];
@@ -69,21 +69,14 @@ if($_SESSION['ccid']){
 		
 		<!-- page css files -->
 		<link href="assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
-		<link href="assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet">
-		<link href="assets/plugins/morris/css/morris.css" rel="stylesheet">
-		<link href="assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
-
-		<link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet">
 
 		<!-- page css files TABLAS -->
 		<link href="assets/plugins/datatables/css/dataTables.bootstrap.css" rel="stylesheet">
-		<link href="assets/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet">
 
 
 		<!-- page css files FORMULARIOS -->
 		<link href="assets/plugins/select2/css/select2.css" rel="stylesheet">
 		<link href="assets/plugins/select2/css/select2-bootstrap.css" rel="stylesheet">
-		<link href="assets/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet">
 
 
 		<link href="assets/css/sweetalert.css" rel="stylesheet">	

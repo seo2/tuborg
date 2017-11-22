@@ -10,7 +10,7 @@ $password 	= $_POST["pass"];
 
 	$db->where ('usuMail', strtolower($email));
 	$db->where ('usuPass',md5($password) );
-	$user = $db->getOne ("mckay125_usuarios");
+	$user = $db->getOne ("tuborg_usuarios");
 	
 	if ($user['usuID'] == '') {
 		$login = 0;

@@ -1,3 +1,8 @@
+<?php
+require_once("admin/_lib/config.php");
+require_once("admin/_lib/MysqliDb.php");
+$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -12,6 +17,7 @@
     
 	<link rel="stylesheet" href="https://use.typekit.net/lkd1qvb.css">
 	<link href="assets/instashow/jquery.instashow.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.css" >
     <link rel="stylesheet" href="assets/css/tuborg.css" >
     
     <link rel="icon" type="image/png" href="assets/img/favicon.png?v=2" />
@@ -22,8 +28,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col s12" id="cabecera">
-					<img src="assets/img/logo-barrio_arte.png" id="logo_ba">
-					<img src="assets/img/bg-header.png" class="responsive-img" id="bg-header"> 
+					<img src="assets/img/logo-barrio_arte.png" id="logo_ba" class="animated slideInDown">
+					<img src="assets/img/bg-header.png" class="responsive-img animated fadeIn" id="bg-header"> 
 				</div>
 			</div>
 		</div>
@@ -90,6 +96,16 @@
 	<div class="container-fluid">
         <div class="row nomarbot">
 			<div class="col s12">
+			<?php
+				$ok = 0;
+				$resultado = $db->rawQuery('select * from tuborg_ig');
+				if($resultado){
+					foreach ($resultado as $r) {
+						$url  .= $r["url"]. ' ';
+						$ok = 1; 
+					}
+				}                           
+			?>	
 				<div data-is
 				    data-is-api="assets/instashow/api/"
 					data-is-source="#cfceurotrip" 
@@ -112,12 +128,14 @@
 					data-is-color-popup-controls-hover ="rgb(0,87,167)"
 					data-is-popup-deep-linking="true"
 					data-is-color-popup-overlay="rgba(255,255,255,.9)"
-					data-is-popup-info="username"
+					data-is-popup-info="username, instagramLink"
 					data-is-responsive='{ "600": { "columns": 2, "rows": 3, "gutter": 0 }}'
 					data-is-scrollbar="false"
 					data-is-easing="ease-in-out"
-					data-is-arrows-control="false" >	
-<!-- data-is-filter-except="https://www.instagram.com/p/BbrzRL1HKfH/ https://www.instagram.com/p/BbnYdPznPAE/"  -->				
+					data-is-arrows-control="false"
+					<?php if($ok==1){ ?>data-is-filter-except="<?php echo $url; ?>"<?php } ?>
+					
+				>				
 			</div>
         </div>
         <!-- / row -->

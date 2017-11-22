@@ -5,7 +5,7 @@ include('sidebar.php');
 if($_GET['ganID']){ 
 	
 	$ganID = $_GET['ganID'];
-  	$resultado = $db->rawQuery("select * from mckay125_ganadores where ganID = $ganID");
+  	$resultado = $db->rawQuery("select * from tuborg_ganadores where ganID = $ganID");
 	if($resultado){
 		foreach ($resultado as $r) {
 			$mk125_Nom  = $r["ganNom"];
@@ -25,51 +25,29 @@ if($_GET['ganID']){
 
 			<div class="row">
 			    <div class="col-md-12">
-			        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" id="formGanador" readonly>
-			        <div class="panel panel-default">
-			            <div class="panel-heading">
-			                <h2>Ganador</h2>
-			            </div>
-			            <div class="panel-body">
-		                    <div class="row">
-		                    	<div class="col-sm-6">
-				                    <div class="form-group">
-				                        <label class="col-md-4 control-label" for="text-input">Nombre</label>
-				                        <div class="col-md-8">
-				                            <input type="text" class="form-control" placeholder=""  name="ganNom" required value="<?php echo $mk125_Nom; ?>"	>
-				                            <? if($_GET['ganID']){ ?>
-				                            <input type="hidden" name="ganID" value="<?php echo $_GET['ganID']; ?>">
-											<? } ?>
-				                        </div>
-				                    </div>			                    		
-		                    	</div>
-		                    	<div class="col-sm-6">
-				                    <div class="form-group">
-				                        <label class="col-md-4 control-label" for="text-input">RUT</label>
-				                        <div class="col-md-8">
-				                            <input type="text" class="form-control"  value="<?php echo $mk125_Rut; ?>" name="ganRut">
-				                        </div>
-				                    </div>			                    		
-		                    	</div>
-		                    </div>
-		                    <div class="row">
-		                    	<div class="col-sm-6">
-				                    <div class="form-group">
-				                        <label class="col-md-4 control-label" for="text-input">Fecha</label>
-				                        <div class="col-md-8">
-				                            <input type="date" class="form-control" placeholder=""  name="ganFec" required value="<?php echo $mk125_Fec; ?>">
-				                        </div>
-				                    </div>			                    		
-		                    	</div>
-		                    </div>
-									
-			            </div>    		
-			            
-
-			            <div class="panel-footer">
-			            	<button type="submit" class="btn btn-sm btn-primary" id="btnSubir"  ><i class="fa fa-dot-circle-o"></i> Guardar</button>
-			            </div>
-			        </div>
+			        <form action="" method="post" class="form-horizontal" id="formGanador">
+				        <div class="panel panel-default">
+				            <div class="panel-heading">
+				                <h2>Banear Foto</h2>
+				            </div>
+				            <div class="panel-body">
+			                    <div class="row">
+			                    	<div class="col-sm-12">
+					                    <div class="form-group">
+					                        <label class="col-md-2 control-label" for="text-input">URL</label>
+					                        <div class="col-md-10">
+					                            <input type="text" class="form-control" placeholder=""  name="url" required>
+					                        </div>
+					                    </div>			                    		
+			                    	</div>
+			                    </div>
+										
+				            </div>   
+	
+				            <div class="panel-footer">
+				            	<button type="submit" class="btn btn-sm btn-primary" id="btnSubir"  ><i class="fa fa-dot-circle-o"></i> Guardar</button>
+				            </div>
+				        </div>
 
 			        </form>
 
@@ -88,7 +66,7 @@ if($_GET['ganID']){
 			<div class="row">
 
 				<div class="col-sm-5">
-					&copy; 2017 Modo
+					&copy; 2017 Tuborg
 				</div><!--/.col-->
 
 				<div class="col-sm-7 text-right">
@@ -133,18 +111,6 @@ if($_GET['ganID']){
 		
 		<script src="assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
 		<script src="assets/plugins/select2/js/select2.min.js"></script>
-		<script src="assets/plugins/autosize/jquery.autosize.min.js"></script>
-		<script src="assets/plugins/placeholder/jquery.placeholder.min.js"></script>
-		<script src="assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
-		<script src="assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
-		<script src="assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
-		<script src="assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
-		<script src="assets/plugins/moment/moment.min.js"></script>
-		<script src="assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
-		<script src="assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
-		<script src="assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
-		<script src="assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
-		<script src="assets/plugins/gritter/js/jquery.gritter.min.js"></script>
 	
 
 		<!-- theme scripts -->
@@ -160,7 +126,6 @@ if($_GET['ganID']){
 		<!-- Scritps de Seo2 -->
 		<script src="assets/js/sweetalert.min.js"></script>
 		<script src="assets/js/jquery.validate.js"></script>
-		<script src="assets/js/jquery.Rut.min.js"></script>
 		<script src="assets/js/cloudcore.js"></script>
 		<!-- end: JavaScript-->
 

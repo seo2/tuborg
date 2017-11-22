@@ -7,10 +7,10 @@ if ($ajax) {
 	$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 
 	
-	if(isset($_POST['ganID'])){
-		$ganID = $_POST['ganID'];
-		$db->where("ganID", $ganID);
-		$db->delete('mckay125_ganadores');
+	if(isset($_POST['id'])){
+		$id = $_POST['id'];
+		$db->where("id", $id);
+		$db->delete('tuborg_ig');
 		echo 'ok';
 	}
 }else{

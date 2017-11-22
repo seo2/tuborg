@@ -4,7 +4,7 @@ header .container{padding-top: 40px;}
 .container-fluid .row .col{ padding: 0; }
 
 #cabecera{position: relative; padding-top: 100px;}
-#logo_ba{ position: absolute; width: 320px; top: 30%; left: 50%; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); transform: translate(-50%,-50%);}
+#logo_ba{ position: absolute; width: 320px; top: 10%; left: 50%; margin-left: -160px;}
 header img#bg-header{margin-bottom: -9px;}
 
 

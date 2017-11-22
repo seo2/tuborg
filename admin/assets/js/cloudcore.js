@@ -1,15 +1,3 @@
-sitio = 'http://seo2.cl/clientes/cloudcore/';
-oldseats = 0;
-
-$.validator.addMethod("rut", function(value, element) {
-  return this.optional(element) || $.Rut.validar(value);
-}, "Este campo debe ser un rut valido.");
-
-$.validator.addMethod("valueNotEquals", function(value, element, arg){
-return arg != value;
-}, "Debes seleccionar una opción");
-
-
 $("#loginForm").validate({
 
 	submitHandler: function(form) {
@@ -106,18 +94,18 @@ $("#formGanador").validate({
 
 		$.ajax({
             type: "POST",
-            url: "ajax/ganador.php",
+            url: "ajax/graba.php",
             data: data,
             success: function(msg) {
 				console.log(msg);
             	if(msg=='ok'){
             						
-	            	swal({   title: "¡Excelente!",   text: "Se ha agregado el ganador",   type: "success",     confirmButtonColor: "#DD6B55",   confirmButtonText: "OK",   cancelButtonText: "Ir a lista de requerimientos",  showCancelButton: false,   closeOnConfirm: false,   closeOnCancel: false , allowOutsideClick: true}, 
+	            	swal({   title: "¡Listo!",   text: "Se ha quitado la foto del sitio",   type: "success",     confirmButtonColor: "#DD6B55",   confirmButtonText: "OK",   cancelButtonText: "Banear Otra",  showCancelButton: false,   closeOnConfirm: false,   closeOnCancel: false , allowOutsideClick: true}, 
 	            	function(isConfirm){   
 	            	if (isConfirm) {  
-	            		window.location.replace("ganadores.php");   
+	            		window.location.replace("index.php");   
 	            	} else {     
-	            		window.location.replace(sitio+"/tareas.php");      
+	            		window.location.replace("formulario.php");      
 	            	} });
             	}else{
 					swal('Ha ocurrido un error, por favor vuelva a intentarlo.');
@@ -149,11 +137,11 @@ $('a.btn-borrar').on('click', function() {
 	},
 	function(isConfirm) {
 		if (isConfirm) {
-	    	var url = "ajax/borra-ganador.php";
+	    	var url = "ajax/borra.php";
 	    	$.ajax({
 	           type: "POST",
 	           url: url,
-			   data: { "ganID": ganID },
+			   data: { "id": ganID },
 	            success: function(data) {
 					console.log(data);
 					if(data == "ok") {
@@ -169,155 +157,3 @@ $('a.btn-borrar').on('click', function() {
 		}
 	});
 });
-
-$("#formExcel").validate({
-	  submitHandler: function(form) {
-		$("#btnSubir").html('<i class="fa fa fa-spinner fa-spin"></i> Guardando');
-
-		// obtengo el archivo a subir
-		var inputFileImage 	= document.getElementById("upload");
-		var file 			= inputFileImage.files[0];
-		var data 			= new FormData();
-		data.append('archivo',file);
-		
-		var other_data = $('#formExcel').serializeArray();
-		$.each(other_data,function(key,input){
-			data.append(input.name,input.value);
-		});
-		
-		$.ajax({
-            type: "POST",
-            url: "ajax/subirExcel.php",
-            contentType:false,
-            data: data,
-            processData:false,
-            cache:false,
-            success: function(msg) {
-				console.log(msg);
-            		if(msg=='ok'){swal({   title: "¡Excelente!",   text: "El archivo se ha subido correctamente. ¿Qué desea hacer ahora?",   type: "success",     confirmButtonColor: "#DD6B55",   confirmButtonText: "lista de requerimientos",   cancelButtonText: "Ir al dashboard",  showCancelButton: true,   closeOnConfirm: false,   closeOnCancel: false , allowOutsideClick: true}, 
-	            	function(isConfirm){   
-	            	if (isConfirm) {  
-	            		window.location.replace("tareas.php");  
-	            	} else {     
-	            		window.location.replace("index.php");     
-	            	} });
-            	}else{
-					swal('Ha ocurrido un error, por favor vuelva a intentarlo.');
-            	}
-            	$("#btnSubir").html('<i class="fa fa-dot-circle-o"></i> Guardar');
-            },
-            error: function(xhr, status, error) {
-				//alert(status);
-			}
-		
-		
-		});
-	}
-}); // fin validate
-
-
-$('#btnSorteo').on('click',function(e){
-	e.preventDefault();
-	$(this).html('<i class="fa fa fa-spinner fa-spin"></i>');
-	var data = $('#formSorteo1').serialize();
-	console.log(data);
-	$.ajax({
-        type: "POST",
-        url: "ajax/ganador_aleatorio.php",
-        data: data,
-        success: function(msg) {
-			console.log(msg);
-			if(msg.success){
-				$('#nombre').val(msg.mk125_Nom);
-				$('#rut').val(msg.mk125_rut);
-				$('#codigo').val(msg.codCod);
-				$('#hora').val(msg.codHora);
-			}else{
-				swal('Ha ocurrido un error, por favor vuelva a intentarlo.');
-			}
-
-        	$("#btnSorteo").html('Aleatorio');
-        	
-        },
-        error: function(xhr, status, error) {
-			//alert(status);
-		}
-	});
-	
-	
-	
-});
-
-$('#btnSorteo1').on('click',function(e){
-	e.preventDefault();
-	$(this).html('<i class="fa fa fa-spinner fa-spin"></i>');
-	var data = $('#formSorteo1').serialize();
-	console.log(data);
-	$.ajax({
-        type: "POST",
-        url: "ajax/ganador_aleatorio_x_fecha.php",
-        data: data,
-        success: function(msg) {
-			console.log(msg);
-			if(msg.success){
-				$('#nombre').val(msg.mk125_Nom);
-				$('#rut').val(msg.mk125_rut);
-				$('#codigo').val(msg.codCod);
-				$('#hora').val(msg.codHora);
-			}else{
-				swal('Ha ocurrido un error, por favor vuelva a intentarlo.');
-			}
-
-        	$("#btnSorteo1").html('Aleatorio');
-        	
-        },
-        error: function(xhr, status, error) {
-			//alert(status);
-		}
-	});
-	
-	
-	
-});
-
-
-$("#formSueno").validate({
-	  submitHandler: function(form) {
-		$("#btnSubir").html('<i class="fa fa fa-spinner fa-spin"></i>');
-
-		var data = $('#formSueno').serialize();
-
-		$.ajax({
-            type: "POST",
-            url: "ajax/sueno.php",
-            data: data,
-            success: function(msg) {
-				console.log(msg);
-            	if(msg=='ok'){
-            						
-	            	swal({   title: "¡Excelente!",   text: "Se ha modificado el estado",   type: "success",     confirmButtonColor: "#DD6B55",   confirmButtonText: "OK",   cancelButtonText: "Ir a lista de requerimientos",  showCancelButton: false,   closeOnConfirm: false,   closeOnCancel: false , allowOutsideClick: true}, 
-	            	function(isConfirm){   
-	            	if (isConfirm) {  
-	            		window.location.replace("index.php");   
-	            	} else {     
-	            		window.location.replace(sitio+"/tareas.php");      
-	            	} });
-            	}else{
-					swal('Ha ocurrido un error, por favor vuelva a intentarlo.');
-            	}
-            	$("#btnSubir").html('<i class="fa fa-dot-circle-o"></i> Guardar');
-            	
-            },
-            error: function(xhr, status, error) {
-				//alert(status);
-			}
-		
-		
-		});
-	}
-}); // fin validate
-
-
-
-
-

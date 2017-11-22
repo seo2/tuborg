@@ -10,13 +10,13 @@ $DB_Username 	= DBUSER; // MySQL Username
 $DB_Password 	= DBPASS; // MySQL Password
 $DB_DBName 		= DBNAME; // MySQL Database Name
 $DB_TBLName 	= "tareas"; // MySQL Table Name
-$xls_filename 	= 'participantes_McKay125_'.date('Y-m-d').'.xls'; // Define Excel (.xls) file name
+$xls_filename 	= 'participantes_tuborg_'.date('Y-m-d').'.xls'; // Define Excel (.xls) file name
 
 
  
 /***** DO NOT EDIT BELOW LINES *****/
 // Create MySQL connection
-$sql 		= "SELECT * FROM mckay125_participantes";
+$sql 		= "SELECT * FROM tuborg_participantes";
 $Connect 	= @mysql_connect($DB_Server, $DB_Username, $DB_Password) or die("Failed to connect to MySQL:<br />" . mysql_error() . "<br />" . mysql_errno());
 // Select database
 $Db = @mysql_select_db($DB_DBName, $Connect) or die("Failed to select database:<br />" . mysql_error(). "<br />" . mysql_errno());

@@ -60,7 +60,7 @@ for($i=2;$i<=$arrayCount;$i++){
 	$loteHorIni		= trim($allDataInSheet[$i]["E"]); 
 	$loteHorFin 	= trim($allDataInSheet[$i]["F"]); 
 
-	$query = "insert into mckay125_lote (
+	$query = "insert into tuborg_lote (
 		loteDesc,	
 		loteCe,
 		loteLote,
