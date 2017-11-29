@@ -6,7 +6,8 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Tuborg</title>
+    <title>Barrio Arte - Tuborg</title>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,18 +19,17 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 	<link rel="stylesheet" href="https://use.typekit.net/lkd1qvb.css">
 	<link href="assets/instashow/jquery.instashow.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animate.css" >
-    <link rel="stylesheet" href="assets/css/tuborg.css" >
+    <link rel="stylesheet" href="assets/css/tuborg.css?v=1.5" >
     
     <link rel="icon" type="image/png" href="assets/img/favicon.png?v=2" />
     
   </head>
   <body>
 	<header>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col s12" id="cabecera">
 					<img src="assets/img/logo-barrio_arte.png" id="logo_ba" class="animated slideInDown">
-					<img src="assets/img/bg-header.png" class="responsive-img animated fadeIn" id="bg-header"> 
 				</div>
 			</div>
 		</div>
@@ -40,9 +40,9 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				<div class="carousel carousel-slider center" data-indicators="true">
 					<a class="carousel-item" href="http://www.gam.cl" target="_blank"><img src="assets/img/slide-1.jpg"></a>
 					<a class="carousel-item" href="http://www.mnba.cl/" target="_blank"><img src="assets/img/slide-2.jpg"></a>
-					<a class="carousel-item" href="https://www.mavi.cl/" target="_blank"><img src="assets/img/slide-3.jpg"></a>
+					<a class="carousel-item" href="https://www.mavi.cl/" target="_blank"><img src="assets/img/slide-3.jpg?v=2"></a>
 					<a class="carousel-item" href="http://www.mac.uchile.cl/" target="_blank"><img src="assets/img/slide-4.jpg"></a>
-					<a class="carousel-item" href="https://www.instagram.com/cervezatuborgchile/" target="_blank"><img src="assets/img/slide-5.jpg"></a>
+					<a class="carousel-item" href="https://www.instagram.com/cervezatuborgchile/" target="_blank"><img src="assets/img/slide-5.jpg?v=2"></a>
 				</div>				
 			</div>
 		</div>
@@ -53,16 +53,19 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				<h2>Somos</h2>
 			</div>
 			<div class="col s12 m9">
+<!--
 				<p>¡Bienvenidos a BARRIO ARTE!<br>
 					Somos una alianza cultural impulsada por los más importantes Museos de Chile para la promoción de la cultura y las artes en su territorio común. BARRIO ARTE propone un encuentro con la comunidad porque creemos que el desarrollo cultural se logra con el trabajo colaborativo,
 					la generación de pertenencia y la valoración de nuestro patrimonio urbano y arquitectónico.<br>
 					¡No te quedes fuera, súmate y #explorabarrioarte!
 				</p>
+-->
+				<p>Una alianza cultural impulsada por espacios vinculados a las artes en el perímetro Lastarria - Parque Forestal, con el objetivo de promocionar la cultura en su territorio común. Barrio Arte propone un encuentro con la comunidad porque creemos que el desarrollo integral se logra con la generación del sentido de pertenencia y la valoración de nuestro patrimonio urbano y arquitectónico, a través del trabajo colaborativo.</p>
 			</div>
 		</div>
 		<div class="row info" id="socios">
 			<div class="col s12 m3 valign-wrapper">
-				<h2>Socios</h2>
+				<h2>Invitan</h2>
 			</div>
 			<div class="col s12 m9 valign-wrapper">
 				<p><a href="http://www.gam.cl" target="_blank">gam</a> - <a href="https://www.mavi.cl/" target="_blank">mavi</a> - <a href="http://www.mac.uchile.cl/" target="_blank">mac</a> - <a href="http://www.mnba.cl/" target="_blank">mnba</a></p>
@@ -75,8 +78,8 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 			<div class="col s12 m9 valign-wrapper">
 				<p>
 					<a href="http://www.elbiografo.cl/wordpress/" target="_blank">El Biógrafo</a> - 
-					<a href="http://www.plopgaleria.com/" target="_blank">Galería Plop</a> - 
-					<a href="http://ekho.cl/" target="_blank">Galería Eckho</a> - 
+					<a href="http://www.plopgaleria.com/" target="_blank">Plop Galería</a> - 
+					<a href="http://ekho.cl/" target="_blank">Eckho Gallery</a> - 
 					<a href="http://metalespesados.cl/#/" target="_blank">Metales Pesados</a> - 
 					<a href="https://www.facebook.com/pages/Libros-Prologo/1429093774039694" target="_blank">Libros Prólogo</a> - 
 					<a href="http://www.galerialira.com/" target="_blank">Galería Lira</a> - 
@@ -108,7 +111,7 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 			?>	
 				<div data-is
 				    data-is-api="assets/instashow/api/"
-					data-is-source="#cfceurotrip" 
+					data-is-source="#explorabarrioarte" 
 				    data-is-width="auto"
 				    data-is-height="auto"
 				    data-is-columns="3"
