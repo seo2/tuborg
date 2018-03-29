@@ -17,12 +17,21 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 
     
 	<link rel="stylesheet" href="https://use.typekit.net/lkd1qvb.css">
-	<link href="assets/instashow/jquery.instashow.min.css" rel="stylesheet">
+<!-- 	<link href="assets/instashow/jquery.instashow.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="assets/css/animate.css" >
     <link rel="stylesheet" href="assets/css/tuborg.css?v=1.5" >
     
     <link rel="icon" type="image/png" href="assets/img/favicon.png?v=2" />
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110458935-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110458935-1');
+</script>
+
   </head>
   <body>
 	<header>
@@ -110,7 +119,7 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				}                           
 			?>	
 				<div data-is
-				    data-is-api="assets/instashow/api/"
+				    data-is-api="assets/instashow2/api/"
 					data-is-source="#explorabarrioarte" 
 				    data-is-width="auto"
 				    data-is-height="auto"
@@ -149,10 +158,10 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
     <footer>
         <div class="row nomarbot">
 			<div class="col s12 hide-on-small-only">
-        		<img src="assets/img/footer-15.png" class="responsive-img">
+        		<img src="assets/img/footer-15.png" class="responsive-img" style="display: block;margin:0 auto;">
 			</div>
 			<div class="col s12 hide-on-med-and-up	">
-        		<img src="assets/img/footer-15_m.png" class="responsive-img">
+        		<img src="assets/img/footer-15_m.png" class="responsive-img" style="display: block;margin:0 auto;">
 			</div>
         </div>
     </footer>	
@@ -164,8 +173,8 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js"></script>
-	<script src="assets/instashow/jquery.instashow.js"></script>
-
+<!-- 	<script src="assets/instashow/jquery.instashow.js"></script> -->
+	<script src="assets/instashow2/elfsight-instagram-feed.js"></script>
     <script src="assets/js/tuborg.js"></script>
   </body>
 </html>
